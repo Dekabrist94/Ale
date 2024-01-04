@@ -1,0 +1,7 @@
+.parallax {
+  background-image: url('../img/3.jpg'); /* Замените на ваше изображение */
+  background-size: cover;
+  background-position: center;
+  height: 300px; /* Высота параллакса */
+  will-change: transform;
+}

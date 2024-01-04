@@ -1,0 +1,16 @@
+.parallax-container {
+  overflow: hidden;
+  position: relative;
+  height: 500px; /* Высота контейнера параллакса */
+}
+
+.parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-image: url('../img/4.jpg'); /* Замените на ваше изображение */
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+}
