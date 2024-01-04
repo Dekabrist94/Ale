@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.6ccd65a8.css",
-    "main.js": "/static/js/main.4c60ec9d.js",
-    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
-    "static/media/biglia.png": "/static/media/biglia.489910104651d3dd950c.png",
-    "static/media/pezzo.jpg": "/static/media/pezzo.4750fd3441f4d9665082.jpg",
-    "static/media/azienda.jpg": "/static/media/azienda.f18f05aaf59e5ec1dfbc.jpg",
-    "static/media/6.jpg": "/static/media/6.9d3ebfdd3aa6feadf34d.jpg",
-    "static/media/1.jpg": "/static/media/1.46a8efc8c625a5a29a04.jpg",
-    "static/media/doosan.png": "/static/media/doosan.6078f84723b29d535809.png",
-    "static/media/2.jpg": "/static/media/2.bd6975322fa66fbc79b6.jpg",
-    "static/media/4.jpg": "/static/media/4.178231f0c0bd770b4708.jpg",
-    "static/media/3.jpg": "/static/media/3.ad9b3311bed4b4ec8e7c.jpg",
-    "static/media/5.jpg": "/static/media/5.f9aaf68eebe464a1524b.jpg",
-    "index.html": "/index.html",
-    "main.6ccd65a8.css.map": "/static/css/main.6ccd65a8.css.map",
-    "main.4c60ec9d.js.map": "/static/js/main.4c60ec9d.js.map",
-    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/Ale.git/static/css/main.6ccd65a8.css",
+    "main.js": "/Ale.git/static/js/main.14d9fb62.js",
+    "static/js/787.28cb0dcd.chunk.js": "/Ale.git/static/js/787.28cb0dcd.chunk.js",
+    "static/media/biglia.png": "/Ale.git/static/media/biglia.489910104651d3dd950c.png",
+    "static/media/pezzo.jpg": "/Ale.git/static/media/pezzo.4750fd3441f4d9665082.jpg",
+    "static/media/azienda.jpg": "/Ale.git/static/media/azienda.f18f05aaf59e5ec1dfbc.jpg",
+    "static/media/6.jpg": "/Ale.git/static/media/6.9d3ebfdd3aa6feadf34d.jpg",
+    "static/media/1.jpg": "/Ale.git/static/media/1.46a8efc8c625a5a29a04.jpg",
+    "static/media/doosan.png": "/Ale.git/static/media/doosan.6078f84723b29d535809.png",
+    "static/media/2.jpg": "/Ale.git/static/media/2.bd6975322fa66fbc79b6.jpg",
+    "static/media/4.jpg": "/Ale.git/static/media/4.178231f0c0bd770b4708.jpg",
+    "static/media/3.jpg": "/Ale.git/static/media/3.ad9b3311bed4b4ec8e7c.jpg",
+    "static/media/5.jpg": "/Ale.git/static/media/5.f9aaf68eebe464a1524b.jpg",
+    "index.html": "/Ale.git/index.html",
+    "main.6ccd65a8.css.map": "/Ale.git/static/css/main.6ccd65a8.css.map",
+    "main.14d9fb62.js.map": "/Ale.git/static/js/main.14d9fb62.js.map",
+    "787.28cb0dcd.chunk.js.map": "/Ale.git/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6ccd65a8.css",
-    "static/js/main.4c60ec9d.js"
+    "static/js/main.14d9fb62.js"
   ]
 }

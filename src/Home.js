@@ -4,7 +4,7 @@ import azienda from './img/azienda.jpg';
 import Map from './Components/GoogleMaps';
 import Cards from './Components/Cards';
 import Slider from './Components/Slider';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import doosan from './img/doosan.png';
 import biglia from './img/biglia.png';
 
