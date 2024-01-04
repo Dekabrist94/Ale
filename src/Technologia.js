@@ -9,7 +9,7 @@ export const Technologia = () => {
 pezzi
     </li>
     <li>
-    macchinari e strumenti di misura 
+    macchinari e strumenti di misura 11
     </li> 
     <li>
       contatore di pezzi +2000
