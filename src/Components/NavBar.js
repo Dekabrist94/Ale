@@ -45,7 +45,8 @@ export default function NavBar() {
           collapseOnSelect
           expand="lg"
           variant="dark"
-          className="navbar navbar-expand-lg navbar-dark fixed-top">
+          className="navbar navbar-expand-lg navbar-dark fixed-top" >
+            
           <Container>
             <Navbar.Brand className=" me-4">
               <Link to="/">
@@ -69,8 +70,8 @@ export default function NavBar() {
                 <Button
                   variant="outline-dark"
                   onClick={handleShow}
-                  style={{ color: 'white', fontSize: '1.4rem' }}>
-                  Ordinare
+                  style={{ color: 'white', fontSize: '1rem' }}>
+                  Preventivo gratuito
                 </Button>
               </Nav>
             </Navbar.Collapse>
@@ -83,7 +84,7 @@ export default function NavBar() {
           className="modal-header"
           style={{ background: 'linear-gradient(to left, black, darkRed)', borderBottom: '0' }}>
           <Modal.Title className="modal-title" style={{ color: 'white' }}>
-            Ordinare
+            Richiedi il tuo preventivo gratuito
           </Modal.Title>
           <Button
             variant="light"

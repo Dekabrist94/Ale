@@ -20,7 +20,14 @@ const StyledCarousel = styled(Carousel)`
     width: 100%;
     padding-bottom: 0;
   }
+
+  @media (max-width: 320px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+      top: -8rem;}
 `;
+
+
 
 const StyledItem = styled(Carousel.Item)`
   @media (max-width: 375px),
@@ -40,7 +47,7 @@ export default function Slider() {
         <img className="d-block w-100" src={img1} alt="First Slide" />
         <Carousel.Caption>
           <h3>First Slide</h3>
-          <p>Well Done ahahahahah</p>
+          <p>Well Done</p>
         </Carousel.Caption>
       </StyledItem>
 

@@ -1,23 +1,28 @@
 import React from 'react';
 import { Container} from 'react-bootstrap';
+import ImageCollage from './Components/Colage';
+import CardsForTech from './Components/CardsTech';
+
 
 export const Technologia = () => {
   return <>
-  <Container style={{paddingTop:'25rem'}}>
+  <Container style={{paddingTop:'5rem'}}>
+<ImageCollage/>
+  <CardsForTech/>
    <ul>
+
     <li>
-pezzi
-    </li>
-    <li>
-    macchinari e strumenti di misura 11
+    macchinari e strumenti di misura 
     </li> 
     <li>
-      contatore di pezzi +2000
+    {/*  */}
     </li>
     <li>
-     
+    {/*   */}
     </li>
+   
    </ul>
+  
   </Container>
   </>;
 };

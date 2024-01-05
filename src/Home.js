@@ -161,12 +161,13 @@ export const Home = () => {
       {/* Блок с фоном и текстом */}
       <Container
         fluid
-        className="text-white py-4"
-        style={{ background: 'linear-gradient(to right, red, black)', height: '90vh' }}>
+        className="text-white py-5"
+        style={{ background: 'linear-gradient(to right, red, black)', height: '95vh' }}>
         <h1
           style={{
             borderLeft: '5px white solid',
-            marginTop: '0.5rem',
+            marginTop: '0rem',
+            marginBottom: '3rem',
             marginLeft: '2rem',
             paddingLeft: '1rem',
           }}>
@@ -174,10 +175,10 @@ export const Home = () => {
         </h1>
         <Row xs={1} md={1} lg={2} xl={2}>
           <Col md={6}>
-            <img style={{ height: '90%' }} src={doosan} alt="Azienda" className="img-fluid mt-2" />
+            <img style={{ width: '120%', marginTop:'-2.5rem' }} src={doosan} alt="Azienda" className="img-fluid" />
           </Col>
           <Col md={6} style={{ paddingTop: '2rem' }}>
-            <img style={{ height: '90%' }} src={biglia} alt="Azienda" className="img-fluid mt-2" />
+            <img style={{ width: '100%', marginTop:'-5rem' }} src={biglia} alt="Azienda" className="img-fluid " />
           </Col>
         </Row>
       </Container>
@@ -197,7 +198,7 @@ export const Home = () => {
             </p>
 
             <ul style={{ style: 'list-style-type: circle', fontSize: '25px' }}>
-              <li>Tornitura e fresatura di altissima precisione con macchine fino a 4 assi</li>
+              <li>Tornitura e fresatura di altissima precisione con macchine fino a 9 assi</li>
               <li>Trattamenti superficiali</li>
               <li>
                 Lavorazione di acciaio inossidabile, ottone, bronzo, alluminio, leghe di
