@@ -49,8 +49,6 @@ const StyledSuffix = styled.span`
   }
 `;
 
-// ...
-
 const AdaptiveCounter = ({ initialValue, targetValue, duration, prefix, suffix }) => {
   const [count, setCount] = useState(0);
   const [isCounting, setIsCounting] = useState(false);
@@ -60,19 +58,13 @@ const AdaptiveCounter = ({ initialValue, targetValue, duration, prefix, suffix }
     let currentCount = 0;
 
     const handleScroll = () => {
-      const element = document.getElementById('adaptiveCounter'); // Используйте уникальный идентификатор здесь
-      const elementTop = element.getBoundingClientRect().top;
-
-      if (!isCounting && elementTop <= window.innerHeight) {
+      if (!isCounting) {
         setIsCounting(true);
         const interval = setInterval(() => {
           currentCount += increment;
           setCount(currentCount);
 
-          if (
-            (increment > 0 && currentCount >= targetValue) ||
-            (increment < 0 && currentCount <= targetValue)
-          ) {
+          if ((increment > 0 && currentCount >= targetValue) || (increment < 0 && currentCount <= targetValue)) {
             clearInterval(interval);
             setCount(targetValue);
           }
@@ -88,7 +80,7 @@ const AdaptiveCounter = ({ initialValue, targetValue, duration, prefix, suffix }
   }, [isCounting, initialValue, targetValue, duration]);
 
   return (
-    <StyledContainer fluid id="adaptiveCounter">
+    <StyledContainer fluid>
       <Row>
         <Col>
           <StyledCounter>

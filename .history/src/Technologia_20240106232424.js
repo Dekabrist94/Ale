@@ -11,6 +11,8 @@ export const Technologia = () => {
         <CardsForTech />
         <ul>
           <li>macchinari e strumenti di misura</li>
+          <li>{/*  */}</li>
+          <li>{/*   */}</li>
         </ul>
       </Container>
     </>

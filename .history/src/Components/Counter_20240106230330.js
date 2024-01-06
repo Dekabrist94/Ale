@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
-
+import { useInView } from 'react-intersection-observer';
 const StyledContainer = styled(Container)`
   text-align: center;
 `;

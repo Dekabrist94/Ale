@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
+import { useInView } from 'react-intersection-observer';
 
 const StyledContainer = styled(Container)`
   text-align: center;
@@ -49,48 +50,38 @@ const StyledSuffix = styled.span`
   }
 `;
 
-// ...
-
 const AdaptiveCounter = ({ initialValue, targetValue, duration, prefix, suffix }) => {
   const [count, setCount] = useState(0);
-  const [isCounting, setIsCounting] = useState(false);
+  const [ref, inView] = useInView({ triggerOnce: true });
 
   useEffect(() => {
-    const increment = Math.ceil((targetValue - initialValue) / (duration / 10));
-    let currentCount = 0;
+    if (inView) {
+      const increment = Math.ceil((targetValue - initialValue) / (duration / 10));
+      let currentCount = 0;
 
-    const handleScroll = () => {
-      const element = document.getElementById('adaptiveCounter'); // Используйте уникальный идентификатор здесь
-      const elementTop = element.getBoundingClientRect().top;
+      const interval = setInterval(() => {
+        currentCount += increment;
+        setCount(currentCount);
 
-      if (!isCounting && elementTop <= window.innerHeight) {
-        setIsCounting(true);
-        const interval = setInterval(() => {
-          currentCount += increment;
-          setCount(currentCount);
+        if (
+          (increment > 0 && currentCount >= targetValue) ||
+          (increment < 0 && currentCount <= targetValue)
+        ) {
+          clearInterval(interval);
+          setCount(targetValue);
+        }
+      }, 10);
 
-          if (
-            (increment > 0 && currentCount >= targetValue) ||
-            (increment < 0 && currentCount <= targetValue)
-          ) {
-            clearInterval(interval);
-            setCount(targetValue);
-          }
-        }, 10);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [isCounting, initialValue, targetValue, duration]);
+      return () => {
+        clearInterval(interval);
+      };
+    }
+  }, [inView, initialValue, targetValue, duration]);
 
   return (
-    <StyledContainer fluid id="adaptiveCounter">
+    <StyledContainer fluid>
       <Row>
-        <Col>
+        <Col ref={ref}>
           <StyledCounter>
             {prefix && <StyledPrefix>{prefix}</StyledPrefix>}
             <StyledNumber>{count}</StyledNumber>

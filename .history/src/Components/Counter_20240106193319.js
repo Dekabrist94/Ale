@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
+import { Fade } from 'react-reveal';
 
 const StyledContainer = styled(Container)`
   text-align: center;
@@ -49,8 +50,6 @@ const StyledSuffix = styled.span`
   }
 `;
 
-// ...
-
 const AdaptiveCounter = ({ initialValue, targetValue, duration, prefix, suffix }) => {
   const [count, setCount] = useState(0);
   const [isCounting, setIsCounting] = useState(false);
@@ -60,10 +59,7 @@ const AdaptiveCounter = ({ initialValue, targetValue, duration, prefix, suffix }
     let currentCount = 0;
 
     const handleScroll = () => {
-      const element = document.getElementById('adaptiveCounter'); // Используйте уникальный идентификатор здесь
-      const elementTop = element.getBoundingClientRect().top;
-
-      if (!isCounting && elementTop <= window.innerHeight) {
+      if (!isCounting) {
         setIsCounting(true);
         const interval = setInterval(() => {
           currentCount += increment;
@@ -88,15 +84,24 @@ const AdaptiveCounter = ({ initialValue, targetValue, duration, prefix, suffix }
   }, [isCounting, initialValue, targetValue, duration]);
 
   return (
-    <StyledContainer fluid id="adaptiveCounter">
-      <Row>
-        <Col>
-          <StyledCounter>
-            {prefix && <StyledPrefix>{prefix}</StyledPrefix>}
-            <StyledNumber>{count}</StyledNumber>
-            {suffix && <StyledSuffix>{suffix}</StyledSuffix>}
-          </StyledCounter>
-        </Col>
+    <StyledContainer fluid>
+      <Row xs={1} md={1} lg={3} xl={3}>
+        {Object.keys(textData).map((key, index) => (
+          <Col key={key}>
+            <Fade
+              bottom={index % 2 === 0}
+              top={index % 2 !== 0}
+              left={index % 2 === 0}
+              right={index % 2 !== 0}
+              delay={index * 200}>
+              <StyledCounter>
+                {prefix && <StyledPrefix>{prefix}</StyledPrefix>}
+                <StyledNumber>{count}</StyledNumber>
+                {suffix && <StyledSuffix>{suffix}</StyledSuffix>}
+              </StyledCounter>
+            </Fade>
+          </Col>
+        ))}
       </Row>
     </StyledContainer>
   );

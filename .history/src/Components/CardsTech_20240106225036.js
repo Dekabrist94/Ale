@@ -45,7 +45,7 @@ function CardsForTech() {
           <Card.Body>
             <StyledCardTitle>Anni di esperienza</StyledCardTitle>
             <Card.Text>
-              <AdaptiveCounter initialValue={0} targetValue={30} duration={5000} prefix="+" />
+              <AdaptiveCounter />
             </Card.Text>
           </Card.Body>
         </StyledCard>

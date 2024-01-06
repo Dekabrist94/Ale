@@ -57,21 +57,21 @@ function ImageCollage() {
         <img className="d-block w-50 mx-auto" src={big1} alt="First slide" />
         <Carousel.Caption>
           <h5>First slide label</h5>
-          <p>Pezzo dal BIGLIA</p>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </StyledCarouselItem>
       <StyledCarouselItem>
         <img className="d-block w-50 mx-auto" src={ok15} alt="Second slide" />
         <Carousel.Caption>
           <h5>Second slide label</h5>
-          <p>Pezzo dal Okuma LB-15</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </StyledCarouselItem>
       <StyledCarouselItem>
         <img className="d-block w-50 mx-auto" src={dos1} alt="Third slide" />
         <Carousel.Caption>
           <h5>Third slide label</h5>
-          <p>Pezzo dal DOOSAN</p>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
         </Carousel.Caption>
       </StyledCarouselItem>
     </StyledCarousel>

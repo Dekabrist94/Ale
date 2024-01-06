@@ -6,11 +6,13 @@ import CardsForTech from './Components/CardsTech';
 export const Technologia = () => {
   return (
     <>
-      <Container style={{ paddingTop: '0rem' }}>
+      <Container style={{ paddingTop: '5rem' }}>
         <ImageCollage />
         <CardsForTech />
         <ul>
           <li>macchinari e strumenti di misura</li>
+          <li>{/*  */}</li>
+          <li>{/*   */}</li>
         </ul>
       </Container>
     </>
