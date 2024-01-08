@@ -1,23 +1,10 @@
 import React from 'react';
-
-import pneumatica from './img/pneumatica.png'
-import automotive from './img/automotive.png'
-import olio from './img/Oliodinamica.png'
-import varia from './img/varia.png'
-
+import pneumatica from './img/pneumatica.png';
+import automotive from './img/automotive.png';
+import olio from './img/Oliodinamica.png';
+import varia from './img/varia.png';
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-
-
-// export const Prodotti = () => {
-//   return <>
-//   <Container style={{paddingTop:'25rem'}}>
-// <img src={pneumatica} alt='pneumatica'/>
-// <img src={automotive} alt='automotive'/>
-// <img src={olio} alt='oliodinamica'/>
-// <img src={varia} alt='varia'/>
-
-//   </Container>
 
 export const Prodotti = () => {
   const [index, setIndex] = useState(0);
@@ -27,41 +14,37 @@ export const Prodotti = () => {
   };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
+    <Carousel activeIndex={index} onSelect={handleSelect} className='carousel' style={{ maxWidth: '600px', margin: 'auto', paddingTop:'5rem'}}>
       <Carousel.Item>
-      <img src={pneumatica} alt='pneumatica'/>
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <img className="img-fluid" src={pneumatica} alt='pneumatica' />
+        <Carousel.Caption style={{paddingTop:'2rem'}}>
+          <h3 style={{color: 'black'}}>First slide label</h3>
+          <p>dsldasjdjaskd</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-      <img src={automotive} alt='automotive'/>
+        <img className="img-fluid" src={automotive} alt='automotive' />
         <Carousel.Caption>
           <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>sdsdsdsdsdsdsd</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-      <img src={olio} alt='oliodinamica'/>
+        <img className="img-fluid" src={olio} alt='oliodinamica' />
         <Carousel.Caption>
           <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          <p>fdfdfdfdfsf</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-      <img src={varia} alt='varia'/>
+        <img className="img-fluid" src={varia} alt='varia' />
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          <h3>Fourth slide label</h3>
+          <p>fdfdfdfdfsf</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
   );
-}
+};
 
 export default Prodotti;
