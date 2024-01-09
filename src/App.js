@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // З
 import Block from './Components/Block';
 import { Home } from './Home';
 import { Technologia } from './Technologia';
-import { Prodotti } from './Prodotti';
+import Prodotti from './Prodotti';
 import { Contatti } from './Contatti';
 
 function App() {
